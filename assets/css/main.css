@@ -112,6 +112,7 @@ li.usericon {
     padding-left: 4.8rem;
     background: #f2c306 url(../img/icons/svg/usericon.svg) 2.3rem center no-repeat;
     background-size: 2.4rem auto;
+    white-space: nowrap;
 }
 
 li.wrench {
@@ -139,6 +140,7 @@ li.letter {
     padding: 1rem;
     font-size: 1.9rem;
     line-height: 2.2rem;
+    font-family: "Segoe WP", Arial, Helvetica, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
@@ -179,7 +181,7 @@ ul.advantages-list {
     font-size: 0;
     text-align: center;
     padding: 3.8rem 0;
-    background: url("../img/patterns/png/diagonal-pattern10x10-alpha6.png") left top / 0.6rem 0.6rem;
+    background: url("../img/patterns/png/diagonal-pattern10x10.png") left top / 0.6rem 0.6rem;
     background-color: rgba(234, 234, 234, 0.4);
 }
 
@@ -304,8 +306,20 @@ h3.date-month {
 
 .twitter-box {
     width: 100%;
-    padding: 2.3rem;
+    padding: 1.4rem 2.3rem 1.2rem;
     background-color: #f5c507;
+}
+
+.twitter-logo-box {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.twitter-logo {
+    width: 54%;
+    margin: 15% auto 10%;
+    
 }
 
 .tweets-board {
@@ -321,12 +335,14 @@ h3.date-month {
     padding: 0 0.9rem;
 }
 
-.tweet-source {
+a.tweet-source p {
     display: block;
+    color: #8f8e8e;
+    text-decoration: none;
 }
 
 .tweet-mount {
-    padding: 0.7rem 1.9rem;
+    padding: 0.6rem 1.9rem 0.6rem 1.9rem;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 1rem;
     transition: 300ms;
@@ -375,4 +391,47 @@ h3.date-month {
     line-height: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #8f8e8e;
+}
+
+.tweet-push-box {
+    padding: 0 0.9rem;
+}
+
+.tweet-push-border {
+    box-sizing: padding-box;
+    border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+}
+
+.tweet-push-box form {
+    font-size: 0;
+}
+
+.tweet-inputs {
+    display: inline-block;
+    white-space: nowrap;
+    border: 0.1rem solid #d1a806;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #aaaaaa;
+}
+
+.tw-text {
+    width: 20.2rem;
+    border-right: none;
+    padding: 0.6rem 0.9rem 0.6rem 1.8rem;
+    border-radius: 1rem 0 0 1rem;
+    background: #fcfcfc;
+
+}
+
+.tw-submit {
+    width: 7rem;
+    border-left: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0 1rem 1rem 0;
+    color: #ffffff;
+    background: #cf8e0c;
 }

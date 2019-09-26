@@ -81,13 +81,16 @@
                 </div>
             </div>
             <div class="twitter-box clearfix">
+                <div class="twitter-logo-box">
+                    <img src="./assets/img/icons/svg/twittericon.svg" alt="twitter logo" class="twitter-logo">
+                </div>
                 <div class="tweets-sum"></div>
-                <img src="./assets/img/icons/svg/plus.svg" width="2rem" alt="" class="plus-more">
+                <img src="./assets/img/icons/svg/plus.svg" width="2rem" alt="plus" class="plus-more">
                 <div class="tweets-board">
                     <div class="tweet-box">
                         <a class="tweet-source" href="#">
                             <div class="tweet-mount">
-                                <p class="tweet">Daily Mobile UI Design inspiration #1 via @cssauthor</p>
+                                <p class="tweet"><span>Daily Mobile UI Design inspiration #1 via @cssauthor</span></p>
                             </div>
                         </a>
                     </div>
@@ -106,7 +109,10 @@
                         </a>
                     </div>
                     <div class="tweet-push-box">
-                        Запушить твит
+                        <form action="#" method="get" class="border-form">
+                            <input type="text" class="tweet-inputs tw-text" name="tweet-pusher" id="tweet-pusher">
+                            <input type="submit" class="tweet-inputs tw-submit" name="tweet-push-button" id="tweet-push-box" value="Tweet">
+                        </form>
                     </div>
                 </div>
             </div>
