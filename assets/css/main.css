@@ -33,7 +33,7 @@ body {
     color: #9b7d08;
 }
 
-header, main {
+header, main, footer {
     width: 100%;
     min-width: 64rem;
     max-width: 64rem;
@@ -434,4 +434,119 @@ a.tweet-source p {
     border-radius: 0 1rem 1rem 0;
     color: #ffffff;
     background: #cf8e0c;
+}
+
+.convenience-box {
+    background-color: #474747;
+}
+
+h1.conv-header {
+    padding: 3.6rem 0;
+    text-align: center;
+    font-size: 3.9rem;
+    font-weight: normal;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #f5c506;
+}
+
+.conv-wrapper {
+    font-size: 0;
+}
+
+.conv-cell {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 4.5rem 0 5.5rem;
+    text-align: center;
+}
+
+.additional-info {
+    display: none;
+}
+
+.img-string {
+    position: relative;
+    display: inline-block;
+    padding-left: 1.4rem; /* тупа по красоте, шоб дизайнер был здоров*/
+    font-size: 0;
+}
+
+.img-string::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: -1.7rem;
+    width: 11.6rem;
+    height: 11.6rem;
+    border-radius: 50%;
+    background-color: #f5c506;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+
+}
+.img-string::after {
+    content: "Its 100% free";
+    position: absolute;
+    top: 1.2rem;
+    left: -1rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+
+}
+
+.img-item {
+    display: inline-block;
+    margin-right: 2.4rem;
+    text-align: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+.img-item.padding-bot {
+    padding-bottom: 4rem;
+}
+
+.img-item:last-child {
+    margin-right: 0;
+}
+
+.f-logo-panel {
+    padding: 0.6rem 6.5rem;
+    background-color: #4c4c4c;
+    box-shadow: 0 -0.4rem 0.4rem -0.1rem rgba(0, 0, 0, 0.8);
+}
+
+.f-logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.f-logo-link img, .f-logo-link h2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.f-logo-img {
+    width: 3.1rem;
+    height: 3.1rem;
+    margin-right: 0.6rem;
+}
+
+.f-logo-link h2 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+    font-family: 'Lucida Sans', 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0.1rem 0.2rem 0 #2c2c2c;
 }
