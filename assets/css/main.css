@@ -33,16 +33,27 @@ body {
     color: #9b7d08;
 }
 
-header, main, footer {
+.just-header,
+.just-main,
+.just-footer {
     width: 100%;
     min-width: 64rem;
     max-width: 64rem;
     margin: 0 auto;
 }
 
+.just-header {
+    font-size: 0;
+    white-space: nowrap;
+    
+}
+
 .logo-box {
+    width: 29%;
+    min-width: 18.5rem;
+    padding: 0 1.4rem 0 1.2rem;
+    white-space: nowrap;
     overflow: hidden;
-    width: 100%;
     font-size: 0;
     font-family: "Lucida Sans", Arial, Helvetica, sans-serif;
     vertical-align: middle;
@@ -50,42 +61,39 @@ header, main, footer {
     background: linear-gradient(to bottom, rgba(99, 99, 99, 1) 0%,rgba(70, 70, 70, 1) 90%);
 }
 
-.logo-box div {
+.logo-pic {
     display: inline-block;
-    font-size: 1.4rem;
-}
-
-.logo-pic-scopes {
-    vertical-align: bottom;
-}
-
-.logo-pic-scopes img {
+    vertical-align: middle;
     width: 100%;
     max-width: 4rem;
-    height: auto;
-    padding: 1.1rem 0.7rem 0 1.2rem;
-    
+    height: auto;    
 }
 
-.logo-sign h1 {
-    padding: 1.1rem 1.5rem 1.3rem 0;
+.logo-sign {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2.1rem 0.6rem;
     font-style: italic;
-    font-family: 'Lucida Sans', 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
-    font-size: 1.9rem;
-    line-height: 1.6rem;
+    font-family: "Lucida Sans", "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
     text-transform: uppercase;
     text-shadow: 0.1rem 0.2rem 0 #2c2c2c;
 }
 
 .top-menu {
     float: right;
-    
-    font-size: 0;
-    line-height: 0;
+    white-space: nowrap;
+    vertical-align: middle;  
+    width: 71%;
+    min-width: 45.4rem;
     font-style: normal;
     font-weight: 400;
+    font-size: 0;
+    line-height: 0;
     font-family: "Segoe WP", Arial, Helvetica, sans-serif;
-    
+    background: url("../img/patterns/png/square3gray-alpha10-menu-pat.png") left top / 0.3rem;
+    background-color: rgb(242, 195, 6);
 }
 
 .top-menu-item {
@@ -93,42 +101,71 @@ header, main, footer {
     border-right: 1px solid #9b7d08;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #f2c306;
     list-style: none;
     overflow: hidden;
     transition: 100ms;
 }
 .top-menu-item:hover {
     color: #7a6307;
+    background-color: rgb(255, 204, 0, 0.5);
 }
 
-.top-menu-item:hover {
-    background-color: #ffcc00;
-}
 
-li.usericon {
+li.user-icon {
     width: 17.2rem;
     padding-right: 1.4rem;
-    padding-left: 4.8rem;
-    background: #f2c306 url(../img/icons/svg/usericon.svg) 2.3rem center no-repeat;
-    background-size: 2.4rem auto;
+    padding-left: 1.5rem;
     white-space: nowrap;
+}
+
+.user-icon-menu {
+    vertical-align: top;
+    width: 2.4rem;
+    margin-right: 0.8rem;
+    transition: 300ms;
 }
 
 li.wrench {
     width: 13.3rem;
     padding-right: 0.6rem;
-    padding-left: 2.7rem;
-    background: #f2c306 url(../img/icons/svg/wrench.svg) 0.8rem center no-repeat;
+    background: url(../img/icons/svg/wrench.svg) 0.8rem center no-repeat;
     background-size: 2.2rem auto;
+}
+
+.wrench-icon-menu {
+    vertical-align: top;
+    width: 2.3rem;
+    margin-right: 0.1rem;
+    margin-left: -0.2rem;
+    transition: 300ms;
+    
 }
 
 li.letter {
     width: 14.9rem;
     padding-right: 0.2rem;
-    padding-left: 4.2rem;
-    background: #f2c306 url(../img/icons/svg/lettericon.svg) 1.2rem center no-repeat;
-    background-size: 2.8rem auto;
+    padding-left: 0.2rem;
+}
+
+.letter-icon-menu {
+    vertical-align: top;
+    width: 3rem;
+    margin-right: 0.5rem;
+    transition: 300ms;
+    
+}
+
+.user-icon-layer1,
+.wrench-icon-layer1,
+.letter-icon-layer1 {
+    fill: #b99403;
+    transition: 500ms;
+}
+
+.top-menu-item:hover .user-icon-layer1,
+.top-menu-item:hover .wrench-icon-layer1,
+.top-menu-item:hover .letter-icon-layer1 {
+    fill: #7a6307;
 }
 
 .top-menu-item:last-child {
@@ -144,12 +181,12 @@ li.letter {
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
+    transition: 500ms;
 }
 
 main {
     background: url(../img/textures/jpg/header-bg.jpg) center top no-repeat;
     background-size: 100% auto;
-
 }
 
 .slider-mount-box {
@@ -157,12 +194,67 @@ main {
 }
 
 .video-ph {
+    position: relative;
     width: 100%;
+    height: 0;
     padding-bottom: 53.907%;
     background: #4c4c4c url(../img/content/jpg/parrots.jpg) center center no-repeat;
 }
 
+.video-native {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 6.8rem;
+    height: 6.8rem;
+    margin: auto;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+}
+
+.play-button-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 6.7rem;
+    height: 6.7rem;
+    margin: auto;
+    
+}
+
+.play-button-layer1 {
+    fill:rgba(245, 244, 242, 1);
+    fill-opacity: 0.5;
+    transition: 300ms;
+}
+
+.play-button-layer2 {
+    fill: rgba(245, 197, 6, 1);
+    fill-opacity: 0.5;
+    transition: 300ms;
+}
+
+.play-button-layer2:hover,
+.play-button-layer2:focus {
+    fill-opacity: 1
+    
+}
+
+
 .advantages-mount {
+    position: relative;
     background: #ffffff;
 }
 
@@ -180,7 +272,7 @@ ul.advantages-list {
     top: -0.5rem;
     font-size: 0;
     text-align: center;
-    padding: 3.8rem 0;
+    padding: 3.8rem 0 2.8rem;
     background: url("../img/patterns/png/diagonal-pattern10x10.png") left top / 0.6rem 0.6rem;
     background-color: rgba(234, 234, 234, 0.4);
 }
@@ -196,6 +288,10 @@ ul.advantages-list li a {
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
+}
+
+.leaf-shift {
+    padding-left: 1.7rem;
 }
 
 .advantages-img-box {
@@ -215,6 +311,22 @@ img.advantages-icon {
     width: 9rem;
     height: 7rem;
     margin: auto;
+}
+
+.cloud-icon-shift {
+    padding-right: 3.4rem;
+}
+
+.cloud-sign-shift {
+    padding-right: 2.4rem;
+}
+
+.plane-icon-shift {
+    padding-right: 0.6rem;
+}
+
+.plane-sign-shift {
+    padding-left: 0.4rem;
 }
 
 .content-box {
@@ -241,7 +353,7 @@ img.advantages-icon {
 
 .post-cell {
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
     width: calc(50% - 0.4rem);
     margin-right: 0.8rem;
     font-weight: 300;
@@ -250,12 +362,49 @@ img.advantages-icon {
     background-color: #ec9e03;
 }
 
+.post-cell.post-small {
+    width: calc(49% - 0.4rem);
+}
+
+.post-plus {
+    position: relative;
+}
+
+.post-plus::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    bottom: 0.6rem;
+    padding: 0.8rem;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 0.8;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 300ms;
+}
+.post-plus:hover::after {
+    color: rgba(255, 255, 255, 1);
+}
+
+.post-plus:focus::after {
+    color: rgba(255, 255, 255, 1);
+}
+.post-plus:active::after {
+    color: rgba(255, 255, 255, 1);
+    bottom: 0.5rem;
+}
+
+.post-cell.post-large {
+    width: calc(51% - 0.4rem);
+    
+}
+
 .post-cell:last-child {
     margin-right: 0;
 }
 
 .post-content {
-    padding: 2.7rem 2.2rem;
+    padding: 1.6rem 3rem 1.6rem 2.6rem;
     font-family: "Segoe WP", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
@@ -306,7 +455,7 @@ h3.date-month {
 
 .twitter-box {
     width: 100%;
-    padding: 1.4rem 2.3rem 1.2rem;
+    padding: 1.4rem 2.3rem 1rem;
     background-color: #f5c507;
 }
 
@@ -319,6 +468,7 @@ h3.date-month {
 .twitter-logo {
     width: 54%;
     margin: 15% auto 10%;
+    padding-right: 1.4rem;  
     
 }
 
@@ -342,10 +492,11 @@ a.tweet-source p {
 }
 
 .tweet-mount {
-    padding: 0.6rem 1.9rem 0.6rem 1.9rem;
+    padding: 0.6rem 3.2rem 0.6rem 1.9rem;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 1rem;
     transition: 300ms;
+    letter-spacing: 0.01rem;
 }
 
 .tweet-box:first-child>.tweet-mount {
@@ -394,11 +545,10 @@ a.tweet-source p {
 }
 
 .tweet-push-box {
-    padding: 0 0.9rem;
+    padding: 0 0.5rem 0 1.3rem;
 }
 
 .tweet-push-border {
-    box-sizing: padding-box;
     border: 0.1rem solid rgba(0, 0, 0, 0.5);
     background-color: #ffffff;
 }
@@ -427,13 +577,36 @@ a.tweet-source p {
 
 }
 
+.tw-text:focus {
+    border: 0.1rem solid rgba(20, 110, 228, 0.8);
+    border-right: none;
+}
+
 .tw-submit {
     width: 7rem;
     border-left: none;
     padding: 0.6rem 0.9rem;
     border-radius: 0 1rem 1rem 0;
     color: #ffffff;
-    background: #cf8e0c;
+    background-color: #cf8e0c;
+    transition: 200ms;
+}
+.tw-submit:hover {
+    border: 0.1rem solid #cf810c;
+    border-left: none;
+    background-color: #e4a019;
+}
+
+.tw-submit:focus {
+    border: 0.1rem solid #d1a806;
+    border-left: none;
+    background-color: #e4a019;
+}
+
+.tw-submit:active {
+    border: 0.1rem solid #cf810c;
+    border-left: none;
+    background-color: #cf810c;
 }
 
 .convenience-box {
@@ -448,6 +621,7 @@ h1.conv-header {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: #f5c506;
+    letter-spacing: 0.04rem;
 }
 
 .conv-wrapper {
@@ -467,7 +641,6 @@ h1.conv-header {
 }
 
 .img-string {
-    position: relative;
     display: inline-block;
     padding-left: 1.4rem; /* тупа по красоте, шоб дизайнер был здоров*/
     font-size: 0;
@@ -476,8 +649,8 @@ h1.conv-header {
 .img-string::before {
     content: "";
     position: absolute;
-    top: -4rem;
-    left: -1.7rem;
+    top: 0.4rem;
+    left: 2.7rem;
     width: 11.6rem;
     height: 11.6rem;
     border-radius: 50%;
@@ -486,36 +659,31 @@ h1.conv-header {
     text-transform: uppercase;
     color: #ffffff;
     white-space: nowrap;
+    z-index: 1;
 
 }
 .img-string::after {
     content: "Its 100% free";
     position: absolute;
-    top: 1.2rem;
-    left: -1rem;
+    top: 5.5rem;
+    left: 3.5rem;
     font-size: 1.9rem;
     font-weight: bold;
     font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: #ffffff;
     white-space: nowrap;
+    z-index: 2;
 
 }
 
-.img-item {
-    display: inline-block;
-    margin-right: 2.4rem;
-    text-align: center;
-    vertical-align: bottom;
-    white-space: nowrap;
-}
-
-.img-item.padding-bot {
-    padding-bottom: 4rem;
-}
-
-.img-item:last-child {
-    margin-right: 0;
+.img-devices {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 54rem;
+    height: auto;
+    text-align: right;
 }
 
 .f-logo-panel {
