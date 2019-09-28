@@ -48,31 +48,56 @@ body {
     
 }
 
+.top-panel-wrapper {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0.3rem 0.3rem -0.2rem rgba(0, 0, 0, 0.6);
+}
+
 .logo-box {
+    float: left;
     width: 29%;
     min-width: 18.5rem;
     padding: 0 1.4rem 0 1.2rem;
-    white-space: nowrap;
     overflow: hidden;
-    font-size: 0;
     font-family: "Lucida Sans", Arial, Helvetica, sans-serif;
-    vertical-align: middle;
     background-color: #4c4c4c;
     background: linear-gradient(to bottom, rgba(99, 99, 99, 1) 0%,rgba(70, 70, 70, 1) 90%);
 }
+
+.logo-index-link {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    font-size: 0;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.logo-index-link:hover .logo-sign,
+.logo-index-link:focus .logo-sign {
+    text-shadow: 0 0 0.8rem #fff133;
+}
+
+.logo-index-link:active {
+    top: 0.1rem;
+}
+
+
 
 .logo-pic {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     max-width: 4rem;
-    height: auto;    
+    height: auto;
+    padding: 1.1rem 0;
 }
 
 .logo-sign {
     display: inline-block;
     vertical-align: middle;
-    padding: 2.1rem 0.6rem;
+    padding: 0.6rem 0.6rem 0;
     font-style: italic;
     font-family: "Lucida Sans", "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
     font-size: 2rem;
@@ -82,10 +107,8 @@ body {
 }
 
 .top-menu {
-    float: right;
     white-space: nowrap;
     vertical-align: middle;  
-    width: 71%;
     min-width: 45.4rem;
     font-style: normal;
     font-weight: 400;
@@ -213,13 +236,31 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 6.8rem;
-    height: 6.8rem;
     margin: auto;
     border: none;
     border-radius: 50%;
     outline: none;
     background-color: transparent;
+}
+
+.v-button-shift-b { /* ох уж эти проделки дизайнера!*/
+    bottom: 5%;
+    left: 3%
+}
+
+.v-button-shift-s {
+    top: 5%;
+    left: 2%;
+}
+
+.v-button-b {
+    width: 13.4rem;
+    height: 13.4rem;  
+}
+
+.v-button-s {
+    width: 12.2rem;
+    height: 12.2rem;  
 }
 
 .play-button-nav {
@@ -228,29 +269,186 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
+    margin: auto;
+    border-radius: 50%;
+    transition: 400ms;
+}
+
+.play-button-b {
     width: 6.7rem;
     height: 6.7rem;
-    margin: auto;
-    
+}
+
+.play-button-s {
+    width: 6.1rem;
+    height: 6.1rem;
 }
 
 .play-button-layer1 {
+    fill:rgba(245, 244, 242, 1);
+    fill-opacity: 1;
+    transition: 400ms;
+}
+
+.play-button-layer2 {
+    fill: rgba(245, 197, 6, 1);
+    fill-opacity: 0.7;
+    transition: 400ms;
+}
+
+.video-button:hover .play-button-nav,
+.video-button:focus .play-button-nav {
+    box-shadow: 0 0 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.video-button:active .play-button-nav {
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.video-button:hover .play-button-layer2,
+.video-button:focus .play-button-layer2 {
+    fill-opacity: 1;
+}
+
+.video-button:active .play-button-layer2 {
+    fill-opacity: 0.4;
+}
+
+.video-button:hover .play-button-layer1,
+.video-button:focus .play-button-layer1 {
+    fill-opacity: 0.8;
+}
+
+.video-button:active .play-button-layer1 {
+    fill-opacity: 0;
+}
+
+.video-control-panel {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    left: 5%;
+    width: 83%;
+    margin: auto;
+    font-size: 0;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.vc-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vc-play {
+    width: 10%;
+    
+}
+
+.vc-progress {
+    width: 80%;
+    padding: 1rem;
+}
+
+.vc-volume {
+    width: 10%;
+    padding: 1rem;
+    
+}
+
+.video-button-sm {
+    margin: auto;
+    border: none;
+    outline: none;
+    padding: 0.4rem;
+    font-size: 0;
+    background-color: transparent;
+}
+
+.play-button-sm-nav {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: auto;
+    transition: 200ms;
+}
+
+.play-button-sm-layer1 {
     fill:rgba(245, 244, 242, 1);
     fill-opacity: 0.5;
     transition: 300ms;
 }
 
-.play-button-layer2 {
+.play-button-sm-layer2 {
     fill: rgba(245, 197, 6, 1);
     fill-opacity: 0.5;
     transition: 300ms;
 }
 
-.play-button-layer2:hover,
-.play-button-layer2:focus {
-    fill-opacity: 1
-    
+.video-button-sm:hover .play-button-sm-nav,
+.video-button-sm:focus .play-button-sm-nav {
+    box-shadow: 0 0 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
 }
+
+.video-button-sm:active .play-button-sm-nav {
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.video-button-sm:hover .play-button-sm-layer2,
+.video-button-sm:focus .play-button-sm-layer2 {
+    fill-opacity: 1
+}
+
+.video-button-sm:active .play-button-sm-layer2 {
+    fill-opacity: 0.2;
+}
+
+.video-button-sm:hover .play-button-sm-layer1,
+.video-button-sm:focus .play-button-sm-layer1 {
+    fill-opacity: 1
+}
+
+.video-button-sm:active .play-button-sm-layer1 {
+    fill-opacity: 0.2;
+}
+
+.vc-progress-out {
+    width: 100%;
+    height: 1.2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(245, 197, 6, 0.28);
+    overflow: hidden;
+    transition: 400ms;
+}
+
+.vc-progress-in {
+    width: 45%;     /* значение ширины = прогресс*/
+    height: 100%;
+    background-color: rgba(245, 197, 6, 1);
+}
+
+.vc-progress:hover .vc-progress-out, 
+.vc-progress:focus .vc-progress-out {
+    background-color: rgba(245, 197, 6, 0.4);
+    box-shadow: 0 0 0.4rem 0.4rem rgba(228, 214, 26, 0.2);
+}
+
+.vc-volume-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.3rem;
+}
+
+.vc-volume-icon-layer1 {
+    fill: rgba(245, 197, 6, 0.4);
+    transition: 400ms;
+}
+
+.vc-volume:hover .vc-volume-icon-layer1,
+.vc-volume:focus .vc-volume-icon-layer1 {
+    fill: rgba(245, 197, 6, 1)
+}
+
 
 
 .advantages-mount {
@@ -283,11 +481,21 @@ ul.advantages-list li {
     font-size: 2.3rem;
 }
 
-ul.advantages-list li a {
+.advantages-cell-link {
+    position: relative;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
+}
+
+.advantages-cell-link:hover h3,
+.advantages-cell-link:focus h3 {
+    text-shadow: 0 0 0.4rem rgba(255, 204, 0, 0.8);
+}
+
+.advantages-cell-link:active {
+    top: 0.1rem;
 }
 
 .leaf-shift {
@@ -373,8 +581,8 @@ img.advantages-icon {
 .post-plus::after {
     content: "+";
     position: absolute;
-    right: 0;
-    bottom: 0.6rem;
+    right: 0.3rem;
+    bottom: 0.9rem;
     padding: 0.8rem;
     font-weight: bold;
     font-size: 2rem;
@@ -382,16 +590,15 @@ img.advantages-icon {
     color: rgba(255, 255, 255, 0.6);
     transition: 300ms;
 }
-.post-plus:hover::after {
-    color: rgba(255, 255, 255, 1);
-}
 
+.post-plus:hover::after,
 .post-plus:focus::after {
     color: rgba(255, 255, 255, 1);
 }
+
 .post-plus:active::after {
     color: rgba(255, 255, 255, 1);
-    bottom: 0.5rem;
+    bottom: 0.8rem;
 }
 
 .post-cell.post-large {
@@ -404,7 +611,7 @@ img.advantages-icon {
 }
 
 .post-content {
-    padding: 1.6rem 3rem 1.6rem 2.6rem;
+    padding: 1.8rem 3rem 1.7rem 2.6rem;
     font-family: "Segoe WP", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
@@ -412,7 +619,7 @@ img.advantages-icon {
 .post-content h3 {
     font-weight: 300;
     font-size: 2.9rem;
-    line-height: 3.4rem;
+    line-height: 3.3rem;
 }
 
 .video-box-43 {
@@ -455,7 +662,7 @@ h3.date-month {
 
 .twitter-box {
     width: 100%;
-    padding: 1.4rem 2.3rem 1rem;
+    padding: 2.4rem 2.3rem 1.1rem;
     background-color: #f5c507;
 }
 
@@ -467,7 +674,7 @@ h3.date-month {
 
 .twitter-logo {
     width: 54%;
-    margin: 15% auto 10%;
+    margin: 12% auto 10%;
     padding-right: 1.4rem;  
     
 }
@@ -485,11 +692,21 @@ h3.date-month {
     padding: 0 0.9rem;
 }
 
-a.tweet-source p {
+a.tweet-source {
     display: block;
     color: #8f8e8e;
     text-decoration: none;
 }
+
+a.tweet-source:hover, a.tweet-source:focus {
+    color: #0072ff;
+    text-decoration: underline;
+}
+
+a.tweet-source:active {
+    color: #c11a1a;
+}
+
 
 .tweet-mount {
     padding: 0.6rem 3.2rem 0.6rem 1.9rem;
@@ -541,7 +758,6 @@ a.tweet-source p {
     font-size: 1.3rem;
     line-height: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: #8f8e8e;
 }
 
 .tweet-push-box {
@@ -693,8 +909,18 @@ h1.conv-header {
 }
 
 .f-logo-link {
+    position: relative;
     display: block;
     text-decoration: none;
+}
+
+.f-logo-link:hover h2,
+.f-logo-link:focus h2 {
+    text-shadow: 0 0 0.6rem #ddb101;
+}
+
+.f-logo-link:active {
+    top: 0.1rem;
 }
 
 .f-logo-link img, .f-logo-link h2 {
