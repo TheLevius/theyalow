@@ -241,6 +241,7 @@ main {
     border-radius: 50%;
     outline: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .v-button-shift-b { /* ох уж эти проделки дизайнера!*/
@@ -334,6 +335,7 @@ main {
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .vc-item {
@@ -576,6 +578,7 @@ img.advantages-icon {
 
 .post-plus {
     position: relative;
+    cursor: pointer;
 }
 
 .post-plus::after {
@@ -805,6 +808,7 @@ a.tweet-source:active {
     border-radius: 0 1rem 1rem 0;
     color: #ffffff;
     background-color: #cf8e0c;
+    cursor: pointer;
     transition: 200ms;
 }
 .tw-submit:hover {
