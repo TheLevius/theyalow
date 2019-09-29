@@ -214,6 +214,10 @@ li.letter {
     
 }
 
+.slider-nav {
+    display: none;
+}
+
 .video-container {
     max-width: 64rem;
     margin: 0 auto;
@@ -587,15 +591,19 @@ img.advantages-icon {
 }
 
 .post-plus {
+    
     position: relative;
     cursor: pointer;
 }
 
 .post-plus::after {
     content: "+";
+    display: none;
     position: absolute;
     right: 0.3rem;
     bottom: 0.9rem;
+    height: 3.4rem;
+    margin: auto;
     padding: 0.8rem;
     font-weight: bold;
     font-size: 2rem;
@@ -612,6 +620,38 @@ img.advantages-icon {
 .post-plus:active::after {
     color: rgba(255, 255, 255, 1);
     bottom: 0.8rem;
+}
+
+.post-tw-counter {
+    position: relative;
+    cursor: pointer;
+}
+
+.post-tw-counter::before {
+    content: "22";
+    display: none;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.9rem;
+    height: 4.3rem;
+    margin: auto;
+    padding: 0.8rem;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 300ms;
+}
+
+.post-tw-counter:hover::before,
+.post-tw-counter:focus::before {
+    color: rgba(255, 255, 255, 1);
+}
+
+.post-tw-counter:active::before {
+    color: rgba(255, 255, 255, 1);
+    top: 1rem;
 }
 
 .post-cell.post-large {
@@ -673,6 +713,7 @@ h3.date-month {
 }
 
 .twitter-box {
+    overflow: hidden;
     width: 100%;
     padding: 2.4rem 2.3rem 1.1rem;
     background-color: #f5c507;
@@ -1104,8 +1145,49 @@ h1.conv-header {
     }
 
     .slider-main-big {
+        position: relative;
         padding: 0.4rem 0;
         font-size: 0;
+    }
+
+    .slider-nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0.7rem;
+        width: 3.2rem;
+        height: 5.7rem;
+        margin: auto;
+        background-color: rgba(245, 197, 6, 0.7);
+        transition: 300ms;
+    }
+
+    .slider-nav:hover,
+    .slider-nav:focus {
+        background-color: rgba(245, 197, 6, 1);
+    }
+
+    .slider-nav:active {
+        background-color: rgba(245, 197, 6, 0.3);
+    }
+
+    .slide-prev {
+        left: 0;
+    }
+
+    .slide-next {
+        right: 0;
+    }
+
+    .arrow-angle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 1.3rem;
+        height: 1.9rem;
+        margin: auto;
     }
 
     .slider-item {
@@ -1218,8 +1300,45 @@ h1.conv-header {
     }
 
     .content-wrapper {
+        position: relative;
         font-size: 0;
         padding-bottom: 7.9rem;
+    }
+
+    .metro-nav-panel {
+        position: absolute;
+        right: 0;
+        bottom: 2.1rem;
+        left: 2.2rem;
+        width: 88%;
+        height: 1.5rem;
+        margin: auto;
+        border-radius: 0.7rem;
+        background-color: rgba(255, 255, 255, 0.48);
+        box-shadow: 0 0 0.4rem -0.2rem rgba(0, 0, 0, 0.3);
+        transition: 300ms;
+    }
+
+    .metro-nav-panel:hover {
+        box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .metro-nav-runner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 27.5%;
+        width: 22%;
+        height: 1.5rem;
+        margin: auto;
+        border-radius: 0.7rem;
+        background-color: #ec9e03;
+        box-shadow: 0 0 0.2rem 0 rgba(94, 85, 35, 0.3);
+        transition: 300ms;
+    }
+
+    .metro-nav-runner {
+        cursor: pointer;
     }
 
     .post-feedboard {
@@ -1250,7 +1369,13 @@ h1.conv-header {
         line-height: 3.7rem;
     }
 
+    .post-plus::after,
+    .post-tw-counter::before {
+        display: block;
+    }
+
     .twitter-box {
+        position: relative;
         display: inline-block;
         vertical-align: bottom;
         width: calc(33.33% - 1rem);
@@ -1261,7 +1386,7 @@ h1.conv-header {
 
     .twitter-logo-box {
         width: 100%;
-        background-color:
+        background-color: transparent;
     }
 
     .twitter-logo {
