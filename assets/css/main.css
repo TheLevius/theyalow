@@ -854,6 +854,7 @@ h1.conv-header {
 }
 
 .conv-wrapper {
+    margin: 0 auto;
     font-size: 0;
 }
 
@@ -1009,7 +1010,10 @@ h1.conv-header {
         margin: 0 auto;
     }
 
-    .top-panel-wrapper, ul.advantages-list, .f-logo-panel {
+    .top-panel-wrapper,
+    .advantages-list,
+    .conv-wrapper,
+    .f-logo-panel {
         max-width: 102rem;
     }
 
@@ -1097,6 +1101,84 @@ h1.conv-header {
     .convenience-box {
         background: url("../img/patterns/png/strange-reverse10x10alpha07.png") left top / 1.5rem 1.5rem;
         background-color: #474747;
+    }
+
+    h1.conv-header {
+        padding: 4.2rem 0 1.2rem;
+    }
+
+    .conv-wrapper {
+        width: 100%;
+        padding: 4.3rem 0 9.7rem;
+        font-size: 0;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .conv-cell {
+        width: 56%;
+        padding: 0 1.3rem;
+        vertical-align: bottom;
+    }
+
+    .img-string {
+        padding-left: 0.5rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .img-string::before {
+        left: -1.3rem; /* А мой ты дизайнер, не попадающий в сетку, дай тебя обниму, родненький*/
+    }
+
+    .additional-info {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 44%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .conv-list {
+        display: inline-block;
+        white-space: normal;
+        font-size: 0;
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        color: #a9a9a7;
+    }
+
+    .conv-item {
+        position: relative;
+        display: inline-block;
+        margin-left: 15%;
+        padding-left: 7.5%;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        list-style: none;
+    }
+
+    .conv-item::before {
+        content: "";
+        position: absolute;
+        top: 0.7rem;
+        left: 0;
+        width: 1.4rem;
+        height: 1.4rem;
+        margin: auto;
+        border-radius: 50%;
+        background-color: #f5c506;
+    }
+
+    .conv-item:nth-child(2) {
+        margin-top: 2.2rem; 
+    }
+
+    .conv-item:nth-child(3) {
+        margin-top: 1.4rem; 
+    }
+
+    .conv-item:nth-child(4) {
+        margin-top: 2.5rem; 
     }
     
     .f-logo-panel {
