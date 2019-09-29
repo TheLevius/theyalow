@@ -553,9 +553,10 @@ img.advantages-icon {
 }
 
 .section-name {
-    padding: 4.2rem 0;
+    padding: 3.7rem 0 3.6rem;
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
     font-size: 3.7rem;
+    line-height: 1;
     text-transform: uppercase;
     color: #ffffff;
     display: none;
@@ -651,13 +652,12 @@ img.advantages-icon {
 .post-date-box {
     display: none;
     width: 11.2rem;
-    padding: 1.5rem 2.7rem 0.9rem 3.1rem;
+    padding: 0.8rem 2.7rem 0.9rem 3.1rem;
     background-color: #ddb101;
     text-align: center;
 }
 
 h2.date-number {
-    margin-bottom: 1rem;
     font-size: 5rem;
     font-weight: bold;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -1013,6 +1013,7 @@ h1.conv-header {
     .top-panel-wrapper,
     .slider-main-box,
     .advantages-list,
+    .content-wrapper,
     .conv-wrapper,
     .f-logo-panel {
         max-width: 102rem;
@@ -1203,10 +1204,75 @@ h1.conv-header {
         right: 1.5rem;
     }
 
+
     .content-box {
         background: url("../img/patterns/png/chess53x42yellow2.png") left top / 5.3rem 4.2rem;
     }
 
+    .section-name {
+        display: block;
+    }
+
+    .post-date-box {
+        display: block;
+    }
+
+    .content-wrapper {
+        font-size: 0;
+        padding-bottom: 7.9rem;
+    }
+
+    .post-feedboard {
+        position: relative;
+        overflow: visible;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 66.66%;
+        padding: 0;
+    }
+
+    .post-cell.post-small {
+        width: 50%;
+        margin: 0;
+        vertical-align: bottom;
+    }
+
+    .post-cell.post-large {
+        width: calc(50% - 2.4rem);
+        margin: 0 2.4rem 0 0;
+    }
+
+    .post-content {
+        padding: 1.8rem 3rem 3rem;
+    }
+
+    .post-content h3 {
+        line-height: 3.7rem;
+    }
+
+    .twitter-box {
+        display: inline-block;
+        vertical-align: bottom;
+        width: calc(33.33% - 1rem);
+        margin-left: 1rem;
+        padding: 0;
+        background-color: #ec9e03;
+    }
+
+    .twitter-logo-box {
+        width: 100%;
+        background-color:
+    }
+
+    .twitter-logo {
+        width: 49%;
+        margin: 17% auto 13%;
+        padding-right: 0;
+    }
+
+    .tweets-board {
+        display: none;
+    }
 
     .convenience-box {
         background: url("../img/patterns/png/strange-reverse10x10alpha07.png") left top / 1.5rem 1.5rem;
