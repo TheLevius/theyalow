@@ -1011,14 +1011,17 @@ h1.conv-header {
     }
 
     .top-panel-wrapper,
+    .slider-main-box,
     .advantages-list,
     .conv-wrapper,
     .f-logo-panel {
         max-width: 102rem;
+        margin: 0 auto;
     }
 
     .logo-box {
         width: auto;
+        margin-top: 1.9rem;
         padding: 0;
         background: none;
     }
@@ -1032,9 +1035,33 @@ h1.conv-header {
     }
 
     .top-menu {
+        position: relative;
         float: right;
-        margin-top: 4%;
+        margin-top: 7.1rem;
         background-image: none;
+        text-align: right;
+    }
+
+    .top-menu::before {
+        content: "";
+        position: absolute;
+        top: -0.9rem;
+        left: -0.8rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(245, 197, 6, 0.27);
+        z-index: -2;
+    }
+
+    .top-menu::after {
+        content: "";
+        position: absolute;
+        top: -0.5rem;
+        left: -0.4rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(245, 197, 6, 0.27);
+        z-index: -1;
     }
 
     .top-menu-item {
@@ -1043,17 +1070,99 @@ h1.conv-header {
         vertical-align: middle;
     }
 
+    li.wrench {
+        padding-right: 0.7rem;
+        padding-left: 1rem;
+    }
+
+    li.letter {
+        padding-right: 1rem;
+        padding-left: 0.7rem;
+    }
+
     .top-menu-item a {
         font-size: 1.7rem;
-        line-height: 1.9rem;
+        line-height: 1.8rem;
+        padding: 0.9rem 1rem 1.1rem;
+    }
+
+    .top-menu-item a span {
+        vertical-align: middle;
     }
 
     .user-icon-menu,
     .wrench-icon-menu,
     .letter-icon-menu {
         width: auto;
-        height: 2.1rem;
-        vertical-align: bottom;
+        height: 1.85rem;
+        vertical-align: middle;
+    }
+    .slider-mount-box {
+        margin: 0;
+        padding: 12.6% 0 5.1%;
+    }
+
+    .slider-main-big {
+        padding: 0.4rem 0;
+        font-size: 0;
+    }
+
+    .slider-item {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .video-container {
+        width: 54%;
+        max-width: 55rem;
+        margin-left: 1rem;
+    }
+
+    .video-ph {
+        padding-bottom: 59.5%;
+    }
+
+    .v-button-shift-b {
+        bottom: 0;
+        left: 0;
+    }
+
+    .video-control-panel {
+        width: 93%;
+        left: 0;
+        bottom: 5%;
+    }
+
+    .vc-progress {
+        width: 83%;
+    }
+
+    .vc-volume {
+        width: 7%;
+    }
+
+    .vc-volume-icon {
+        margin-left: 1rem;
+    }
+
+    .text-container {
+        width: calc(46% - 1rem);
+        text-align: center;
+    }
+
+    .motto {
+        white-space: nowrap;
+        padding-bottom: 2.9rem;
+        padding-left: 2rem;
+        font-size: 6.3rem;
+        line-height: 7.5rem;
+        font-family: "Asap", sans-serif;
+        color: #f5c506;
+        text-transform: uppercase;
+    }
+
+    .motto > span {
+        color: #ffffff;
     }
 
     .advantages-box {
@@ -1063,10 +1172,6 @@ h1.conv-header {
     .advantages-layer-pat {
         position: static;
         box-shadow: 0 -0.1rem 0.6rem 0.1rem rgba(0, 0, 0, 0.4);
-    }
-
-    ul.advantages-list {
-        
     }
 
     ul.advantages-list li {
@@ -1091,6 +1196,11 @@ h1.conv-header {
 
     .cloud-icon-shift, .cloud-sign-shift {
         padding: 0;
+    }
+
+    img.plane-icon-shift {
+        height: 8.5rem;
+        right: 1.5rem;
     }
 
     .content-box {
