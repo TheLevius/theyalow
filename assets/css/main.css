@@ -51,7 +51,7 @@ body {
 .top-panel-wrapper {
     position: relative;
     z-index: 1;
-    box-shadow: 0 0.3rem 0.3rem -0.2rem rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0.3rem 0.3rem -0.2rem rgba(0, 0, 0, 0.6);    
 }
 
 .logo-box {
@@ -60,14 +60,16 @@ body {
     min-width: 18.5rem;
     padding: 0 1.4rem 0 1.2rem;
     overflow: hidden;
+    font-size: 0;
     font-family: "Lucida Sans", Arial, Helvetica, sans-serif;
+    text-align: center;
     background-color: #4c4c4c;
     background: linear-gradient(to bottom, rgba(99, 99, 99, 1) 0%,rgba(70, 70, 70, 1) 90%);
 }
 
 .logo-index-link {
     position: relative;
-    display: block;
+    display: inline-block;
     white-space: nowrap;
     font-size: 0;
     text-decoration: none;
@@ -82,8 +84,6 @@ body {
 .logo-index-link:active {
     top: 0.1rem;
 }
-
-
 
 .logo-pic {
     display: inline-block;
@@ -107,6 +107,7 @@ body {
 }
 
 .top-menu {
+    
     white-space: nowrap;
     vertical-align: middle;  
     min-width: 45.4rem;
@@ -117,6 +118,8 @@ body {
     font-family: "Segoe WP", Arial, Helvetica, sans-serif;
     background: url("../img/patterns/png/square3gray-alpha10-menu-pat.png") left top / 0.3rem;
     background-color: rgb(242, 195, 6);
+    
+    
 }
 
 .top-menu-item {
@@ -124,6 +127,7 @@ body {
     border-right: 1px solid #9b7d08;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    text-align: center;
     list-style: none;
     overflow: hidden;
     transition: 100ms;
@@ -135,8 +139,7 @@ body {
 
 
 li.user-icon {
-    width: 17.2rem;
-    padding-right: 1.4rem;
+    padding-right: 1rem;
     padding-left: 1.5rem;
     white-space: nowrap;
 }
@@ -149,9 +152,7 @@ li.user-icon {
 }
 
 li.wrench {
-    width: 13.3rem;
     padding-right: 0.6rem;
-    background: url(../img/icons/svg/wrench.svg) 0.8rem center no-repeat;
     background-size: 2.2rem auto;
 }
 
@@ -165,7 +166,6 @@ li.wrench {
 }
 
 li.letter {
-    width: 14.9rem;
     padding-right: 0.2rem;
     padding-left: 0.2rem;
 }
@@ -196,7 +196,7 @@ li.letter {
 }
 
 .top-menu-item a {
-    display: block;
+    display: inline-block;
     padding: 1rem;
     font-size: 1.9rem;
     line-height: 2.2rem;
@@ -207,19 +207,22 @@ li.letter {
     transition: 500ms;
 }
 
-main {
-    background: url(../img/textures/jpg/header-bg.jpg) center top no-repeat;
+.slider-mount-box {
+    margin-bottom: -1.8rem;
+    background: url(../img/textures/jpg/header-bg.jpg) center top repeat-y;
     background-size: 100% auto;
 }
 
-.slider-mount-box {
-    margin-bottom: -1.8rem;
+.video-container {
+    max-width: 64rem;
+    margin: 0 auto;
 }
 
 .video-ph {
     position: relative;
     width: 100%;
     height: 0;
+    margin: 0 auto;
     padding-bottom: 53.907%;
     background: #4c4c4c url(../img/content/jpg/parrots.jpg) center center no-repeat;
 }
@@ -788,7 +791,7 @@ a.tweet-source:active {
 }
 
 .tw-text {
-    width: 20.2rem;
+    width: calc(100% - 7rem);
     border-right: none;
     padding: 0.6rem 0.9rem 0.6rem 1.8rem;
     border-radius: 1rem 0 0 1rem;
@@ -861,6 +864,7 @@ h1.conv-header {
 }
 
 .img-string {
+    position: relative;
     display: inline-block;
     padding-left: 1.4rem; /* тупа по красоте, шоб дизайнер был здоров*/
     font-size: 0;
@@ -869,8 +873,8 @@ h1.conv-header {
 .img-string::before {
     content: "";
     position: absolute;
-    top: 0.4rem;
-    left: 2.7rem;
+    top: -4.2rem;
+    left: -1.5rem;
     width: 11.6rem;
     height: 11.6rem;
     border-radius: 50%;
@@ -885,8 +889,8 @@ h1.conv-header {
 .img-string::after {
     content: "Its 100% free";
     position: absolute;
-    top: 5.5rem;
-    left: 3.5rem;
+    top: 0.8rem;
+    left: -0.8rem;
     font-size: 1.9rem;
     font-weight: bold;
     font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
@@ -947,4 +951,53 @@ h1.conv-header {
     text-transform: uppercase;
     color: #ffffff;
     text-shadow: 0.1rem 0.2rem 0 #2c2c2c;
+}
+
+
+@media all and (min-width: 641px) and (max-width: 960px) {
+    .just-header,
+    .just-main,
+    .just-footer {
+        width: 100%;
+        min-width: 64rem;
+        max-width: 96rem;
+        margin: 0 auto;
+    }
+
+    .video-container {
+        padding-top: 5%;
+    }
+
+    .top-menu-item:last-child {
+        border-right: 1px solid #9b7d08;
+    }
+
+    .user-icon {
+        width: 27%;
+    }
+
+    .wrench {
+        width: 21%;
+    }
+
+    .letter {
+        width: 23%;
+    }
+
+    li .top-menu-item a {
+        margin: 0 auto;
+    }
+}
+
+@media all and (min-width: 960px) {
+    
+    .just-header,
+    .just-main,
+    .just-footer {
+        width: 100%;
+        max-width: 130rem;
+        margin: 0 auto;
+    }
+
+    
 }
